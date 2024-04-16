@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css"/>
+    <link rel="stylesheet" href="responsive.css"/>
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-QMRD/zZfoFvKvepctNvJNqD4UodZg1mS22WXAC5ms+o83BNG8wFBIwJWNaZ8JnR5" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+    <style>
+      body {
+        text-align: center;
+        padding: 40px 0;
+        background: #ffa1b5;
+        background: url('https://e0.pxfuel.com/wallpapers/236/437/desktop-wallpaper-restaurant-creative-restaurant-restaurant-website-food-background-food-table.jpg') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+      }
+      header {
+    position: fixed; /* Add this line to fix the header position */
+    top: 0; /* Add this line to position the header at the top */
+    width: 100%; /* Add this line to make the header span the full width */
+    z-index: 1000; /* Add this line to ensure the header is above other content */
+    background-color: rgba(226, 131, 152, 0.9); /* Add background color with some transparency */
+  }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #eff7f7;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+        }
+        header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(248, 60, 60, 0.9);
+        animation: slideDown 1s ease forwards;
+      }
+      @keyframes slideDown {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+      i1 {
+        color: #99fb06;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background:rgb(0,0,0);
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px #eff2f5;
+        display: inline-block;
+        margin-top: 1px;
+        animation: fadeInRight 1s ease forwards; /* Add animation */
+        opacity: 10;
+      }
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(80px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+
+
+.gif-container img {
+  max-width: 50%;
+  max-height: 500%;
+  
+}
+
+      
+    </style>
+    <body>
+        <header>
+            <div class="container">
+                <div class="navbar">
+                <div class ="logo">
+                    <a href="#"><img src="imgs\logo.png" alt=""></a>
+                </div>
+                <nav>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="menu.html"><i class="fas fa-hamburger"></i> Menu</a></li>
+                    <li><a href="reservation.html"><i class="fa fa-fw fa-user"></i> Reservation</a></li>
+                    <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="party-customization.html"><i class="fa fa-fw fa-glass-cheers"></i> Party customization</a></li>
+                </nav>
+            </div>
+            </div>
+        </header>
+    <div class="card">
+      <div class="card">
+        <div class="gif-container">
+          <img src="https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif" alt="Success GIF" />
+        </div>
+        <h1>Reservation Successful</h1>
+        <p>Dear Customer,</p>
+            <p>Welcome to Cosy Restaurant! We are delighted to confirm that your reservation has been successfully registered.</p>
+            <p>Your table is now reserved for your preferred date and time for the no.of.specified guests.</p>
+            <p>If you have any special requests or need to modify your reservation, please feel free to contact us.</p>
+            <p>We look forward to hosting you and providing you with a memorable dining experience.</p>
+            <p>Thank you for choosing Cosy Restaurant!</p>
+      </div>
+      
+        
+  </body>
+</html>

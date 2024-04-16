@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="responsive.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-QMRD/zZfoFvKvepctNvJNqD4UodZg1mS22WXAC5ms+o83BNG8wFBIwJWNaZ8JnR5" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Reservation</title>
+</head>
+<body>
+    <!------------header start2222--------->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class ="logo">
+                    <a href="#"><img src="imgs/logo.png" alt=""></a>
+                </div>
+                <nav>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="menu.html"><i class="fas fa-hamburger"></i> Menu</a></li>
+                    <li><a href="reservation.html"><i class="fa fa-fw fa-user"></i> Reservation</a></li>
+                    <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                    <li><a href="party-custamization.html"><i class="fa fa-fw fa-glass-cheers"></i> Party customization</a></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="reservation_tb1">
+        <div class="container">
+            <div class="form_data">
+                <h2 class="normal_heading">Make a Reservation Now</h2>
+                <form name="reserve-form" action="reservation.php" method="POST">
+                    <input type="text" placeholder="Name" id="name" name="customer_name" required>
+                    <input type="email" placeholder="Email ID" id="email" name="customer_email_id" required>
+                    <input type="tel" placeholder="Phone number" id="phone" name="customer_phone_no" required>
+                    <input type="date" placeholder="Booking Date" id="date" name="booking_date" required>
+                    <input type="time" placeholder="Booking Time" id="time" name="timing" required>
+                    <input type="number" placeholder="Number Of Person" id="guests" name="no_of_guests" min="1" required>
+                    <textarea placeholder="Message Request" id="special-requests" name="special_requests" rows="4"></textarea>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

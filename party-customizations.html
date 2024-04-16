@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Customization</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/bay-leaf-black-pepper-black-background-condiments-flat-view-space-text_350891-622.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #333; /* Dark text color */
+        }
+     
+        header {
+            background-color: #AC9362; /* Red header background */
+            color: #000000; /* White text color */
+            padding: 20px 0; /* Increased padding for header */
+            text-align: center;
+          
+        }
+    
+        nav {
+            background-color:  #F5F5DC; /* Mild pink navigation background */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ccc; /* Light gray bottom border */
+        }
+    
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+    
+        nav a {
+            color: #333; /* Dark text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+    
+        nav a:hover {
+            color: #cc0000; /* Red text color on hover */
+        }
+    
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Center the container vertically */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+        }
+    
+
+        /* Container styles */
+        .container {
+        max-width: 800px;
+        margin: 20px auto; /* Center the container vertically */
+        padding: 20px;
+        background-color: #A9A9A9; /* Light gray background for the container */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 16px;
+            background-color: #f9f9f9; /* Light gray background */
+        }
+    
+        button[type="submit"] {
+            background-color: #cc0000; /* Red button color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth color transition */
+        }
+    
+        button[type="submit"]:hover {
+            background-color: #aa0000; /* Darker red on hover */
+        }
+        .logo {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>SpacePlate</h1>
+        <p>Delicious Food in a Cozy Atmosphere</p>
+    </header>
+    <nav>
+        <li><a href="index2.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="menu.html"><i class="fas fa-hamburger"></i> Menu</a></li>
+        <li><a href="reservation.html"><i class="fa fa-fw fa-user"></i> Reservation</a></li>
+        <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+        <li><a href="party-customizations.html"><i class="fa fa-fw fa-glass-cheers"></i> Party customization</a></li>
+        <li><a href="payment.html"><i class="fa fa-fw fa-glass-cheers"></i> Payment</a></li>
+    </nav>
+
+    <div class="container">
+        <h2>Party Customization</h2>
+        <form name="contact-form" action="customization.php" method="POST">
+        <form id="party-form" class="party-form">
+            <div class="form-group">
+                <label for="cake-type">Type of Cake:</label>
+                <select id="cake-type" name="cake-type">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="black-forest">Black Forest</option>
+                    <option value="choco-truffle">Choco Truffle</option>
+                </select>
+                <label for="cake-weight">Weight:</label>
+                <select id="cake-weight" name="cake-weight">
+                    <option value="1kg">1kg</option>
+                    <option value="2kg">2kg</option>
+                    <option value="3kg">3kg</option>
+                    <option value="4kg">4kg</option>
+                    <option value="5kg">5kg</option>
+                </select>
+                <br>
+                <div class="form-group" id="cake-total-price-box">
+                    <label for="cake-total-price">Total Cost of Selected Cake:</label>
+                    <input type="text" id="cake-total-price" name="cake-total-price" readonly>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="party-theme">Party Theme:</label>
+                <select id="party-theme" name="party-theme">
+                    <option value="birthday">Birthday</option>
+                    <option value="company-meetups">Company Meetups</option>
+                    <option value="friends-get-together">Friends Get Together</option>
+                    <option value="family-gatherings">Family Gatherings</option>
+                </select><div class="form-group" id="theme-total-price-box">
+                    <label for="theme-total-price">Total Cost of Selected Theme:</label>
+                    <input type="text" id="theme-total-price" name="theme-total-price" readonly>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="food-from-hotel" name="food-from-hotel">
+                    <span class="checkbox-label">Food from Hotel: </span>Yes
+                </label>
+                <div id="food-options" style="display: none;">
+                    <label>Select Food Items:</label><br>
+                    <input type="checkbox" id="biryani" name="food-item" value="biryani"> Biryani - Rs. 200<br>
+                    <input type="checkbox" id="butter-chicken" name="food-item" value="butter-chicken"> Butter Chicken - Rs. 250<br>
+                    <input type="checkbox" id="paneer-tikka" name="food-item" value="paneer-tikka"> Paneer Tikka - Rs. 180<br>
+                    <input type="checkbox" id="tandoori-roti" name="food-item" value="tandoori-roti"> Tandoori Roti - Rs. 20<br>
+                    <input type="checkbox" id="naan" name="food-item" value="naan"> Naan - Rs. 25<br>
+                    <input type="checkbox" id="palak-paneer" name="food-item" value="palak-paneer"> Palak Paneer - Rs. 200<br>
+                    <input type="checkbox" id="chicken-tikka" name="food-item" value="chicken-tikka"> Chicken Tikka - Rs. 220<br>
+                    <input type="checkbox" id="aloo-gobi" name="food-item" value="aloo-gobi"> Aloo Gobi - Rs. 150<br>
+                    <input type="checkbox" id="dal-makhani" name="food-item" value="dal-makhani"> Dal Makhani - Rs. 180<br>
+                    <input type="checkbox" id="chana-masala" name="food-item" value="chana-masala"> Chana Masala - Rs. 160<br>
+                    <input type="checkbox" id="samosa" name="food-item" value="samosa"> Samosa - Rs. 30<br>
+                    <input type="checkbox" id="pakora" name="food-item" value="pakora"> Pakora - Rs. 40<br>
+                    <input type="checkbox" id="mutton-biryani" name="food-item" value="mutton-biryani"> Mutton Biryani - Rs. 300<br>
+                    <input type="checkbox" id="fish-curry" name="food-item" value="fish-curry"> Fish Curry - Rs. 250<br>
+                    <input type="checkbox" id="rasgulla" name="food-item" value="rasgulla"> Rasgulla - Rs. 20<br>
+                    <input type="checkbox" id="gulab-jamun" name="food-item" value="gulab-jamun"> Gulab Jamun - Rs. 25<br>
+                    <input type="checkbox" id="jalebi" name="food-item" value="jalebi"> Jalebi - Rs. 20<br>
+                    <input type="checkbox" id="rabri" name="food-item" value="rabri"> Rabri - Rs. 30<br>
+                    <input type="checkbox" id="kulfi" name="food-item" value="kulfi"> Kulfi - Rs. 40<br>
+                    <span class="price-tab" id="food-price"></span>
+                </div>
+                <label for="food-cost">Total Cost of Selected Food (for one serving):</label>
+                <input type="text" id="food-cost" name="food-cost" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="members">Number of Members:</label>
+                <input type="number" id="members" name="members" min="1">
+            </div>
+
+            <label for="total-cost">Total Cost for All Members:</label>
+            <input type="text" id="total-cost" name="total-cost" readonly>
+            <br>
+            <br>
+
+            <button type="submit">Submit</button>
+<br><br>
+
+            <!-- Total amount to pay -->
+<div class="form-group" id="total-amount-to-pay-box">
+    <label for="total-amount-to-pay">Total Amount to Pay:</label>
+    <input type="text" id="total-amount-to-pay" name="total-amount-to-pay" readonly>
+</div>
+           
+           <button id="make-payment-button" type="button">Make Payment</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Update price tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            const cakeTypeSelect = document.getElementById('cake-type');
+            const cakeWeightSelect = document.getElementById('cake-weight');
+            const themeSelect = document.getElementById('party-theme');
+            const foodCheckbox = document.getElementById('food-from-hotel');
+            const foodOptions = document.getElementById('food-options');
+            const membersInput = document.getElementById('members');
+            const foodCostInput = document.getElementById('food-cost');
+            const totalCostInput = document.getElementById('total-cost');
+            const cakeTotalPriceBox = document.getElementById('cake-total-price-box');
+            const cakeTotalPriceInput = document.getElementById('cake-total-price');
+            const themeTotalPriceBox = document.getElementById('theme-total-price-box');
+            const themeTotalPriceInput = document.getElementById('theme-total-price');
+
+            cakeTypeSelect.addEventListener('change', updatePrice);
+            cakeWeightSelect.addEventListener('change', updatePrice);
+            themeSelect.addEventListener('change', updatePrice);
+            foodCheckbox.addEventListener('change', toggleFoodOptions);
+            membersInput.addEventListener('input', updateTotalCost);
+
+            // Add event listeners to food item checkboxes
+            const foodItemsCheckboxes = document.querySelectorAll('input[name="food-item"]');
+            foodItemsCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateFoodCost);
+            });
+
+            function updateCakeTotalPrice() {
+                const cakeType = document.getElementById('cake-type').value;
+                const cakeWeight = document.getElementById('cake-weight').value;
+                const totalPrice = getPrice(cakeType) * getPrice(cakeWeight);
+                document.getElementById('cake-total-price').value = 'Rs. ' + totalPrice;
+            }
+            cakeTypeSelect.addEventListener('change', updateCakeTotalPrice);
+            cakeWeightSelect.addEventListener('change', updateCakeTotalPrice);
+
+            function updateThemeTotalPrice() {
+                const theme = themeSelect.value;
+                const totalPrice = getPrice(theme);
+                themeTotalPriceInput.value = 'Rs. ' + totalPrice;
+            }
+            themeSelect.addEventListener('change', updateThemeTotalPrice);
+
+            function redirectToPayment() {
+        window.location.href = 'payment.html'; // Redirect to payment.html
+    }
+
+            function updatePrice() {
+                if (foodCheckbox.checked) {
+                    let totalPrice = 0;
+                    // Calculate price based on selections
+                    // totalPrice += getPrice(cakeTypeSelect.value);
+                    // totalPrice += getPrice(cakeWeightSelect.value);
+                    // totalPrice += getPrice(themeSelect.value);
+                    // Add price for selected food items
+                    const foodItems = document.querySelectorAll('input[name="food-item"]:checked');
+                    foodItems.forEach(item => {
+                        totalPrice += getPrice(item.value);
+                    });
+                    // Update total cost for one serving
+                    foodCostInput.value = 'Rs. ' + totalPrice;
+                    // Update total cost for all members
+                    updateTotalCost();
+                }
+            }
+
+            function toggleFoodOptions() {
+                foodOptions.style.display = foodCheckbox.checked ? 'block' : 'none';
+                updatePrice();
+            }
+
+            function updateTotalCost() {
+                if (foodCheckbox.checked) {
+                    const foodCost = parseInt(foodCostInput.value.replace('Rs. ', '') || 0);
+                    const members = parseInt(membersInput.value) || 0;
+                    const totalCost = foodCost * members;
+                    totalCostInput.value = 'Rs. ' + totalCost;
+                }
+            }
+
+            function updateFoodCost() {
+                let totalPrice = 0;
+                // Add price for selected food items
+                const foodItems = document.querySelectorAll('input[name="food-item"]:checked');
+                foodItems.forEach(item => {
+                    totalPrice += getPrice(item.value);
+                });
+                // Update total cost for one serving
+                foodCostInput.value = 'Rs. ' + totalPrice;
+                // Update total cost for all members
+                updateTotalCost();
+            }
+
+            function updateTotalAmountToPay() {
+        const cakeTotalPrice = parseInt(document.getElementById('cake-total-price').value.replace('Rs. ', '') || 0);
+        const themeTotalPrice = parseInt(document.getElementById('theme-total-price').value.replace('Rs. ', '') || 0);
+        const totalCostForAllMembers = parseInt(document.getElementById('total-cost').value.replace('Rs. ', '') || 0);
+        const totalAmountToPay = cakeTotalPrice + themeTotalPrice + totalCostForAllMembers;
+        
+        // Display the total amount to pay box
+        const totalAmountToPayBox = document.getElementById('total-amount-to-pay-box');
+        totalAmountToPayBox.style.display = 'block';
+        
+        // Update the total amount to pay input value
+        const totalAmountToPayInput = document.getElementById('total-amount-to-pay');
+        totalAmountToPayInput.value = 'Rs. ' + totalAmountToPay;
+    }
+
+            function getPrice(option) {
+                switch(option) {
+                    case 'chocolate':
+                        return 2;
+                    case 'vanilla':
+                        return 2;
+                    case 'strawberry':
+                        return 3;
+                    case 'black-forest':
+                        return 1;
+                    case 'choco-truffle':
+                        return 5;
+                    case '1kg':
+                        return 200;
+                    case '2kg':
+                        return 300;
+                    case '3kg':
+                        return 400;
+                    case '4kg':
+                        return 500;
+                    case '5kg':
+                        return 600;
+                    case 'birthday':
+                        return 5000;
+                    case 'company-meetups':
+                        return 2500;
+                    case 'friends-get-together':
+                        return 1000;
+                    case 'family-gatherings':
+                        return 8000;
+                    case 'biryani':
+                        return 200;
+                    case 'butter-chicken':
+                        return 250;
+                    case 'paneer-tikka':
+                        return 180;
+                    case 'tandoori-roti':
+                        return 20;
+                    case 'naan':
+                        return 25;
+                    case 'palak-paneer':
+                        return 200;
+                    case 'chicken-tikka':
+                        return 220;
+                    case 'aloo-gobi':
+                        return 150;
+                    case 'dal-makhani':
+                        return 180;
+                    case 'chana-masala':
+                        return 160;
+                    case 'samosa':
+                        return 30;
+                    case 'pakora':
+                        return 40;
+                    case 'mutton-biryani':
+                        return 300;
+                    case 'fish-curry':
+                        return 250;
+                    case 'rasgulla':
+                        return 20;
+                    case 'gulab-jamun':
+                        return 25;
+                    case 'jalebi':
+                        return 20;
+                    case 'rabri':
+                        return 30;
+                    case 'kulfi':
+                        return 40;
+                    default:
+                        return 0;
+                }
+            }
+    //         const submitButton = document.querySelector('button[type="submit"]');
+    // submitButton.addEventListener('click', updateTotalAmountToPay);
+    const submitButton = document.querySelector('button[type="submit"]');
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent page refresh
+        updateTotalAmountToPay();
+        const makePaymentButton = document.getElementById('make-payment-button');
+    makePaymentButton.addEventListener('click', redirectToPayment); // Update total amount to pay
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Other code...
+
+    function redirectToPayment() {
+        window.location.href = 'payment.html'; // Redirect to payment1.html
+    }
+
+    const submitButton = document.querySelector('button[type="submit"]');
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission
+        updateTotalAmountToPay(); // Update total amount to pay
+        redirectToPayment(); // Redirect to payment1.html
+    });
+});
+        });
+    </script>
+    
+</body>
+</html>
